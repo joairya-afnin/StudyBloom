@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyBloom | Your Personal Syllabus Tracker</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <a href="#home" class="logo">
+            <span class="logo-icon">✿</span> StudyBloom
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#courses">My Courses</a>
+            <a href="#study-time">Study Time</a>
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="welcome-text">YOUR LITTLE SPACE TO GROW 🌷</p>
+
+            <h1>Grow your goals,<br>
+                <span>one page at a time.</span>
+            </h1>
+
+            <p class="hero-description">
+                Organize your syllabus, celebrate your progress,
+                and make every study session count.
+            </p>
+
+            <p class="daily-quote">
+                "Don't wish for it, work for it."
+            </p>
+
+            <a href="#courses" class="primary-btn">
+                Start Studying →
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="stat-card">
+            <div class="stat-icon">📚</div>
+            <h2 id="total-courses">0</h2>
+            <p>Total Courses</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🌸</div>
+            <h2 id="completed-topics">0</h2>
+            <p>Topics Completed</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">✨</div>
+            <h2 id="overall-progress">0%</h2>
+            <p>Overall Progress</p>
+        </div>
+    </section>
+
+
+    <!-- My Courses Section -->
+    <section id="courses" class="section">
+        <div class="section-heading">
+            <p class="section-label">YOUR LEARNING JOURNEY</p>
+            <h2>My Courses <span>♡</span></h2>
+            <p>Small steps today, big achievements tomorrow.</p>
+        </div>
+
+        <!-- Add Course Form -->
+        <div class="form-card">
+            <h3>Add a New Course</h3>
+
+            <form id="course-form">
+                <div class="form-group">
+                    <label for="course-name">Course Name</label>
+                    <input
+                        type="text"
+                        id="course-name"
+                        placeholder="e.g. Computer Architecture"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="course-code">Course Code</label>
+                    <input
+                        type="text"
+                        id="course-code"
+                        placeholder="e.g. CSE-3521"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    + Add Course
+                </button>
+            </form>
+        </div>
+
+        <!-- Course Cards Will Appear Here -->
+        <div id="course-list" class="course-grid">
+            <!-- JavaScript will display course cards here -->
+        </div>
+
+        <p id="empty-courses" class="empty-message">
+            No courses added yet. Start by adding your first course! 🌷
+        </p>
+    </section>
+
+
+    <!-- Study Time Section -->
+    <section id="study-time" class="section study-section">
+        <div class="section-heading">
+            <p class="section-label">MAKE EVERY MINUTE COUNT</p>
+            <h2>Study Time <span>♡</span></h2>
+            <p>Focus on one topic at a time and keep growing.</p>
+        </div>
+
+        <!-- Study Timer -->
+        <div class="timer-card">
+            <div class="timer-icon">⏳</div>
+
+            <h3>Your Focus Session</h3>
+
+            <div id="timer-display" class="timer-display">
+                00:00:00
+            </div>
+
+            <div class="form-group">
+                <label for="timer-course">Choose Course</label>
+                <select id="timer-course">
+                    <option value="">Select a course</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="timer-topic">Choose Topic</label>
+                <select id="timer-topic">
+                    <option value="">Select a topic</option>
+                </select>
+            </div>
+
+            <div class="timer-buttons">
+                <button id="start-timer" class="primary-btn" type="button">
+                    ▶ Start Studying
+                </button>
+
+                <button id="stop-timer" class="secondary-btn" type="button" disabled>
+                    ■ Stop & Save
+                </button>
+            </div>
+
+            <p id="timer-message" class="timer-message">
+                Choose a course and topic to begin.
+            </p>
+        </div>
+
+        <!-- Study Summary -->
+        <div class="study-summary">
+            <div class="summary-card">
+                <span>📅</span>
+                <div>
+                    <p>Today's Study Time</p>
+                    <h3 id="today-study-time">0 min</h3>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <span>📖</span>
+                <div>
+                    <p>Total Study Sessions</p>
+                    <h3 id="total-sessions">0</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Study History -->
+        <div class="history-card">
+            <h3>Recent Study Sessions</h3>
+
+            <div id="study-history">
+                <p class="empty-message">
+                    Your completed study sessions will appear here.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with ♡ and a little bit of discipline.</p>
+        <p>© 2026 StudyBloom | Bloom at your own pace 🌷</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
