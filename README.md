@@ -34,7 +34,7 @@ An internet connection is required for the Google Fonts and Tailwind CSS CDN res
 
 ## 🌐 Live Website
 
-Visit StudyBloom: **[https://joairya-afnin.github.io/StudyBloom/]**
+Visit StudyBloom: **https://joairya-afnin.github.io/StudyBloom/**
 
 ## 👩‍💻 Author
 
